@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 100wh;
+    margin: 50px 100px;
+    padding: 50px 100px;
+    background-color: rgb(221, 212, 212);
+}
+
+.form:hover {
+    cursor: pointer;
+}
+
+.form:hover .form__wrapper--title {
+    color: black;
+    transition: 1s;
+}
+
+.form:hover .form__wrapper--title::after {
+    content: '+';
+    width: 30px;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    color: black;
+    transition: 1s;
+}
+
+.form__label {
+    font-size: 70px;
+}
+
+.form__wrapper {
+    border-top: 1px solid grey;
+    padding: 30px 0 40px 0;
+    position: relative;
+}
+
+.form__wrapper:hover {
+    cursor: pointer;
+}
+
+.form__wrapper:hover>.form__wrapper--input {
+    height: 700px;
+}
+.form__wrapper:hover>.form__wrapper--title::after {
+    transition: 1s;
+    transform: rotate(45deg);
+}
+
+.form__wrapper:hover>#radio1 {
+    background-image: url('./images/robot.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.form__wrapper:hover>#radio2 {
+    background-image: url('./images/robot2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.form__wrapper:hover>#radio3 {
+    background-image: url('./images/robot6.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.form__wrapper:hover>#radio4 {
+    background-image: url('./images/robot4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+
+.form__wrapper--title {
+    display: block;
+    width: 100%;
+    font-size: 50px;
+    color: rgb(49, 49, 141);
+    position: absolute;
+    top: 30px;left: 30px;
+
+}
+
+.form__wrapper--input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    appearance: none;
+}
+
+.form__wrapper--input:hover {
+    cursor: pointer;
+}
+
+.form__wrapper--input:checked {
+    height: 700px;
+}
+
+#radio1:checked {
+    background-image: url('./images/robot.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#radio2:checked {
+    background-image: url('./images/robot2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#radio3:checked {
+    background-image: url('./images/robot6.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#radio4:checked {
+    background-image: url('./images/robot4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form__wrapper--input:checked~.form__wrapper--title {
+    color: black;
+}
+
+.form__wrapper--input:checked~.form__wrapper--title::after {
+    color: black;
+    transform: rotate(45deg);
+}
