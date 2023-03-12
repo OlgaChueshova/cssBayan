@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: fit-content;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 10px;
+    padding: 0 10px;
+    background-color: rgb(221, 212, 212);
+    border-radius: 10px;
+}
+
+.form__label {
+    font-size: 30px;
+}
+
+.form__wrapper {
+    border-top: 1px solid grey;
+    position: relative;
+}
+
+.form__wrapper--title {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.form__wrapper--title::after {
+    content: '+';
+    width: 30px;
+    position: absolute;
+    top: 0px;
+    right: -15px;
+    color: black;
+    transition: 1s;
+}
+
+.form__wrapper--input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0;
+    appearance: none;
+    margin: 0;
+}
+
+.form__wrapper--input:checked {
+    height: 400px;
+    transition: 1.5s;
+}
+
+#radio2:checked,
+#radio4:checked {
+    height: 300px;
+}
+
+#radio1:checked {
+    background-image: url('./images/robot6.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#radio2:checked {
+    background-image: url('./images/robot2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#radio3:checked {
+    background-image: url('./images/robot.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#radio4:checked {
+    background-image: url('./images/robot4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.form__wrapper--input:checked~.form__wrapper--title::after {
+    color: black;
+    transform: rotate(45deg);
+    top: 5px;
+}
+
+@media screen and (min-width: 350px) {
+ 
+    #radio1:checked,
+    #radio2:checked,
+    #radio3:checked {
+        background-size: 80%;
+    }
+
+    #radio4:checked {
+        background-size: 90%;
+    }
+}
+
+@media screen and (min-width: 410px) {
+ 
+    #radio1:checked,
+    #radio2:checked,
+    #radio3:checked {
+        background-size: 70%;
+    }
+
+    #radio4:checked {
+        background-size: 80%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+ 
+    #radio1:checked,
+    #radio2:checked,
+    #radio3:checked {
+        background-size: 60%;
+    }
+
+    #radio4:checked {
+        background-size: 70%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+ 
+    #radio1:checked,
+    #radio2:checked,
+    #radio3:checked {
+        background-size: 55%;
+    }
+
+    #radio4:checked {
+        background-size: 65%;
+    }
+}
+
+@media screen and (min-width: 820px) {
+  
+    .form {
+        margin: 30px 50px;
+        padding: 0 35px;
+    }
+
+    .form__label {
+        font-size: 50px;
+    }
+
+    .form__wrapper--title {
+        font-size: 40px;
+        top: 20px;
+    }
+
+    .form__wrapper--input {
+        height: 80px;
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    .form__wrapper--input:checked {
+        height: 600px;
+    }
+
+    #radio2:checked,
+    #radio4:checked {
+        height: 450px;
+    }
+
+    .form__wrapper--title::after {
+        right: -5px;
+    }
+
+    .form__wrapper--input:checked~.form__wrapper--title::after {
+        top: 0;
+    }
+
+    #radio1:checked,
+    #radio2:checked,
+    #radio3:checked,
+    #radio4:checked {
+        background-size: 65%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .form {
+        margin: 50px 100px;
+        padding: 0 50px;
+    }
+
+    .form:hover {
+        cursor: pointer;
+    }
+
+    .form:hover .form__wrapper--title {
+        color: black;
+        transition: 1s;
+    }
+
+    .form__wrapper--title::after {
+        display: none;
+    }
+
+    .form:hover .form__wrapper--title::after {
+        display: block;
+    }
+
+    .form__label {
+        font-size: 70px;
+    }
+
+    .form__wrapper:hover {
+        cursor: pointer;
+    }
+
+    .form__wrapper:hover>.form__wrapper--input {
+        height: 800px;
+    }
+
+    .form__wrapper:hover>#radio2,
+    .form__wrapper:hover>#radio4 {
+        height: 600px;
+    }
+
+    .form__wrapper:hover>.form__wrapper--title::after {
+        transition: 1s;
+        transform: rotate(45deg);
+    }
+
+    .form__wrapper--title {
+        color: rgb(49, 49, 141);
+        font-size: 50px;
+        top: 30px;
+    }
+
+    .form__wrapper--title:hover {
+        cursor: pointer;
+    }
+
+    .form__wrapper--input:hover {
+        cursor: pointer;
+    }
+
+    .form__wrapper--input {
+        margin: 0;
+        height: 110px;
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    .form__wrapper--input:checked {
+        height: 800px;
+    }
+
+    #radio2:checked,
+    #radio4:checked {
+        height: 600px;
+    }
+
+    .form__wrapper--input:checked~.form__wrapper--title {
+        color: black;
+    }
+
+    .form__wrapper:hover>#radio1 {
+        background-image: url('./images/robot6.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        transition: 1s;
+    }
+
+    .form__wrapper:hover>#radio2 {
+        background-image: url('./images/robot2.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        transition: 1s;
+    }
+
+    .form__wrapper:hover>#radio3 {
+        background-image: url('./images/robot.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        transition: 1s;
+    }
+
+    .form__wrapper:hover>#radio4 {
+        background-image: url('./images/robot4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        transition: 1s;
+    }
+
+    #radio1:checked,
+    #radio2:checked,
+    #radio3:checked,
+    #radio4:checked {
+        background-size: 65%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    #radio1:checked,
+    #radio2:checked,
+    #radio3:checked,
+    #radio4:checked {
+        background-size: 50%;
+    }
+
+    .form__wrapper:hover>#radio4,
+    .form__wrapper:hover>#radio3,
+    .form__wrapper:hover>#radio2,
+    .form__wrapper:hover>#radio1 {
+        background-size: 50%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    #radio1:checked,
+    #radio2:checked,
+    #radio3:checked,
+    #radio4:checked {
+        background-size: 40%;
+    }
+
+    .form__wrapper:hover>#radio4,
+    .form__wrapper:hover>#radio3,
+    .form__wrapper:hover>#radio2,
+    .form__wrapper:hover>#radio1 {
+        background-size: 40%;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+ 
+    #radio1:checked,
+    #radio2:checked,
+    #radio3:checked {
+        background-size: 30%;
+    }
+
+    #radio4:checked {
+        background-size: 45%;
+    }
+
+    .form__wrapper:hover>#radio3,
+    .form__wrapper:hover>#radio2,
+    .form__wrapper:hover>#radio1 {
+        background-size: 30%;
+    }
+
+    .form__wrapper:hover>#radio4 {
+        background-size: 45%;
+    }
+}
